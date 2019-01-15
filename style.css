@@ -8,3 +8,131 @@ body{
     text-align: center;
     font-family: sans-serif;
 }
+div{
+    position: relative;
+}
+nav{
+    position: relative;
+}
+span{
+    position: absolute;
+    top: 50%;
+    margin: -0.625em;
+
+}
+
+.container{
+    display: grid;
+    height: 100vh;
+    /*grid-gap: 5px;*/
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: minmax(240px, auto) minmax(480px, auto) minmax(40px, auto) ;
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+}
+/*styles for header section*/
+header{
+    grid-area: header;
+    background-color: red;
+
+    display: grid;
+    /*height: 100vh;*/
+    /*grid-column-gap: 1px;*/
+    /*grid-row-gap: 5px;*/
+    grid-template-columns: 1fr 7fr auto;
+    grid-template-rows: minmax(40px, auto) minmax(200px, auto) ;
+    grid-template-areas: "one-one one-two"
+                         "two two";
+}
+.header__one-one{
+    grid-area: one-one;
+    background-color: yellow;
+}
+.header__one-two{
+    grid-area: one-two;
+    background-color: orange;
+}
+.header__two{
+    grid-area: two;
+    background-color: purple;
+
+    /*using flexbox*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+.header__two--blocks{
+    height: 150px;
+    width: 120px;
+    margin-top: 30px;
+}
+.header__two--two-one{
+    background-color: #d60278;
+}
+.header__two--two-two{
+    background-color: #d7663f;
+}
+.header__two--two-three{
+    background-color: #1fd758;
+}
+.header__two--two-four{
+    background-color: #5845d7;
+}
+/*styles for main section*/
+main{
+    grid-area: main;
+    background-color: green;
+
+    display: grid;
+    /*height: 100vh;*/
+    /*grid-column-gap: 1px;*/
+    /*grid-row-gap: 5px;*/
+    /*grid-template-columns: 2fr 3fr 4fr;*/
+    /*2fr 3fr 4fr 2fr 2fr 2fr auto*/
+    grid-template-rows: minmax(60px, auto) minmax(120px, auto) minmax(100px, auto) minmax(200px, auto) ;
+    grid-template-areas:    "three-one three-one three-one three-one  three-two three-two three-two three-two three-two three-two"
+                            "four-one four-one four-one four-one four-one four-one  six six six six"
+                            "four-two four-two four-two four-three four-three four-three . . . ."
+                            "five five five five five five . . . . ";
+}
+.main__three-one{
+    grid-area: three-one;
+    background-color: #9b972a;
+}
+.main__three-two{
+    grid-area: three-two;
+    background-color: #379b52;
+}
+.main__four-one{
+    grid-area: four-one;
+    background-color: #9b9392;
+}
+.main__four-two{
+    grid-area: four-two;
+    background-color: #9b610b;
+}
+.main__four-three{
+    grid-area: four-three;
+    background-color: #75169b;
+}
+.main__five{
+    grid-area: five;
+    background-color: #9b0805;
+}
+.main__six{
+    grid-area: six;
+    background-color: #1c9b7c;
+    align-self:  start;
+    min-height: 60px;
+}
+/*styles for footer section*/
+footer{
+    display: grid;
+    grid-area: footer;
+    background-color: yellow;
+}
