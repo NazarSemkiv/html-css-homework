@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     transition: .5s;
+    border-radius: 5px;
 }
 
 body{
@@ -10,10 +11,7 @@ body{
     font-family: sans-serif;
 }
 /*text centered*/
-div{
-    position: relative;
-}
-nav{
+div, footer, nav{
     position: relative;
 }
 span{
@@ -39,7 +37,7 @@ a{
 }
 a:hover {
     transition: 3s;
-    color: white;
+    color: #eeeeee;
 }  /*end*/
 
 .container{
@@ -65,15 +63,15 @@ header{
 .header__one-one{
     grid-area: one-one;
     margin-right: 5px;
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, .7);
 }
 .header__one-two{
     grid-area: one-two;
-    background-color: orange;
+    background-color: rgba(255, 165, 0, .7);
 }
 .header__two{
     grid-area: two;
-    background-color: purple;
+    background-color: rgba(128, 0, 128, .7);
 
     display: flex;
     flex-direction: row;
@@ -81,11 +79,13 @@ header{
     justify-content: space-around;
     align-items: center;
 }
-.header__two--blocks{
+.header__two > div{
+    color: #fff;
     height: 150px;
     width: 250px;
     margin-top: 30px;
     background-size: cover;
+    border: 1px solid rgba(0,0,0,.7);
 }
 .header__two--two-one{
     background-image: url("img/photo-1.jpg");
@@ -116,44 +116,43 @@ main{
 .main__three-one{
     margin-right: 5px;
     grid-area: three-one;
-    background-color: #9b972a;
+    background-color: rgba(155, 151, 42, .7);
 }
 .main__three-two{
     grid-area: three-two;
-    background-color: #379b52;
+    background-color: rgba(55, 155, 82, .7);
 }
 .main__four-one{
     grid-area: four-one;
-    background-color: #9b9392;
+    background-color: rgba(155, 147, 146, .7);
 }
 .main__four-two{
     margin-top: -3px;
     grid-area: four-two;
-    background-color: #9b610b;
+    background-color: rgba(155, 97, 11, .7);
 }
 .main__four-three{
     margin-top: -3px;
     grid-area: four-three;
-    background-color: #75169b;
+    background-color: rgba(117, 22, 155, .7);
 }
 .main__five{
     margin-bottom: 3px;
     margin-top: -3px;
     grid-area: five;
-    background-color: #9b0805;
+    background-color: rgba(155, 8, 5, .7);
 }
 .main__six{
     grid-area: six;
-    background-color: #1c9b7c;
+    background-color: rgba(28, 155, 124, .7);
     align-self:  start;
     min-height: 60px;
 }/*end*/
 
 /*styles for footer section*/
 footer{
-    display: grid;
     grid-area: footer;
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, .7);
 }/*end*/
 
 
@@ -166,7 +165,7 @@ footer{
     .container{
         grid-template-rows: minmax(340px, auto) minmax(440px, auto) minmax(40px, auto) ;
     }
-    .header__two--blocks{
+    .header__two > div{
         height: 130px;
         width: 350px;
         margin-top: 10px;
@@ -181,12 +180,12 @@ footer{
     }
 }
 @media only screen and (max-width: 710px){
-    .header__two--blocks{
+    .header__two > div{
         width: 250px;
     }
 }
 @media only screen and (max-width: 525px){
-    .header__two--blocks{
+    .header__two > div{
         width: 200px;
     }
     a{
@@ -194,7 +193,7 @@ footer{
     }
 }
 @media only screen and (max-width: 420px){
-    .header__two--blocks{
+    .header__two > div{
         width: 150px;
     }
 }/*end*/
@@ -214,7 +213,7 @@ footer{
         flex-direction: column;
         justify-content: center;
     }
-    .header__two--blocks{
+    .header__two > div{
         width: 340px;
         height: 65px;
         margin-top: 7px;
@@ -237,12 +236,12 @@ footer{
     }
     }
 @media only screen and (max-width: 350px){
-    .header__two--blocks{
+    .header__two > div{
         width: 320px;
     }
 }
 @media only screen and (max-width: 330px){
-    .header__two--blocks{
+    .header__two > div{
         width: 310px;
     }
 }/*end*/
